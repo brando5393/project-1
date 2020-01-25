@@ -1,5 +1,5 @@
 // firebase connect code
-<script>
+
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyCtuSfxpVxINhIyPIpuMGAHswNVvPYAgeM",
@@ -12,4 +12,3 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-</script>
