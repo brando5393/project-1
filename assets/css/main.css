@@ -1,3 +1,31 @@
 body{
     
+    background: url("../images/289-2892325_bookshelf-background-clipart.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#page-heading {
+
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+h1 {
+        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    
+}
+
+#tagline {
+
+      text-align: center;
+      
+}
+
+h5 {
+   
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+     
 }
