@@ -27,31 +27,35 @@ $.ajax({
     // console.log(response.results.books);//this gives list of all info of bestsellers in an array
     var bestsellers = response.results.books //storing bestsellers in a var
 
-    // console.log(bestsellers);
-    // //to get just the title: 
-    // console.log(bestsellers[0].title);
-    
-    // //to get just the book image: 
-    // console.log(bestsellers[0].book_image);
-
-    // //to get the syopsis/description:
-    // console.log(bestsellers[0].description);
-
-    // //to get the rank:
-    // console.log(bestsellers[0].rank);
-
     for(var i=0; i< bestsellers.length; i++) {
         // console.log(bestsellers[i]);
 
         var title= bestsellers[i].title;
-        console.log(title);
+        // console.log(title);
+        var author= bestsellers[i].author;
+        // console.log(author);
         var bookImg= bestsellers[i].book_image;
-        console.log(bookImg);
+        // console.log(bookImg);
         var bookSynp= bestsellers[i].description;
-        console.log(bookSynp);
+        // console.log(bookSynp);
         var ratings=bestsellers[i].rank;
-        console.log(ratings);
+        // console.log(ratings);
 
+    
+        //created Img tag for  bookImg
+        var booksImgHolder = $("<img>").attr("src",bookImg).addClass("bestSellersImg")
+        console.log(booksImgHolder);
+
+        //all the info to be display 
+        var bestSellersInfo= $("<p>").html(
+            "Rating : " + ratings  + "<br>" + 
+            "Title: " + title + "<br>" + 
+            "Author: " + author + "<br>"  +
+            "Synopsis: " + bookSynp + "<br>" 
+             );
+
+       //testing if it'll show on HTML
+    //  $(input name of div here).append(bestSellersInfo, booksImgHolder);
     }
 
 });
