@@ -27,8 +27,19 @@ $.ajax({
     // console.log(response.results.books);//this gives list of all info of bestsellers in an array
     var bestsellers = response.results.books //storing bestsellers in a var
 
-    for(var i=0; i< bestsellers.length; i++) {
-        // console.log(bestsellers[i]);
+
+    // need to create a for loop that will only pull 5 random books  out of all these to show 
+    //I"m thinking will need to set up a new loop that will pull up 5 books 
+
+    var randomBook = bestsellers[Math.floor(Math.random() * bestsellers.length)];
+    console.log(randomBook);
+    
+
+    //this will pull up ALL the listings of books which is 15 and i want it t to show 5 RANDOM books
+    for(var i=0; i<5; i++) {
+    // for(var i=0; i< bestsellers.length; i++) {
+    //     // console.log(bestsellers[i]);
+
 
         var title= bestsellers[i].title;
         // console.log(title);
@@ -48,14 +59,20 @@ $.ajax({
 
         //all the info to be display 
         var bestSellersInfo= $("<p>").html(
-            "Rating : " + ratings  + "<br>" + 
+            "Rank " + ratings  + " out of 15" + "<br>" + //have explain NYT have 15 total somewhere
             "Title: " + title + "<br>" + 
             "Author: " + author + "<br>"  +
             "Synopsis: " + bookSynp + "<br>" 
              );
 
+   
+
+    //have to get the information want to display associated with the random books shown..
+        //this does show random books (only displaying 5 b/c of loop from above);
+
+       
        //testing if it'll show on HTML
-    //  $(input name of div here).append(bestSellersInfo, booksImgHolder);
-    }
+     $(".test-div").append(booksImgHolder, bestSellersInfo);
+    };
 
 });
