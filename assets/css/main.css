@@ -6,6 +6,11 @@ body{
     background-position: center;
 }
 
+form span, form label{
+    color: burlywood;
+}
+
+
 
 h1 {
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
@@ -15,6 +20,17 @@ h5 {
    
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
      
+}
+
+.form-button{
+    background-color: burlywood;
+    border: 5px double #6D4C41;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: large;
+    padding: 5px;
+    margin: 3px 4px 0 0;
+    cursor: pointer;
 }
 
 .form-group{
@@ -31,6 +47,27 @@ h5 {
     font-weight: bold;
     
 }
+
+#reset-btn{
+    color: red;
+}
+
+#reset-btn:hover{
+    background-color: red;
+    color: whitesmoke;
+    box-shadow: 5px 10px black;
+}
+
+#submit-btn:hover{
+    background-color: green;
+    color: whitesmoke;
+    box-shadow: 5px 10px black;
+}
+
+#submit-btn{
+    color: green;
+}
+
 #tagline {
 
       text-align: center;
