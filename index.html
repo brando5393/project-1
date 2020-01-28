@@ -24,20 +24,135 @@
 </head>
 
 <body>
-    <header>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col l12">
 
-    </header>
-    <main>
+                    <h5 id="tagline" class="orange-text text lighten-4">Information, reviews and custom reading lists
+                        all at you fingertips</h5>
 
-    </main>
-    <footer>
+                    <h1 id="page-heading" class="orange-text text lighten-4">Welcome to Book Sleuth</h1>
 
-    </footer>
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row">
+                <div class="col l12">
+                    <div class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Best Sellers</span>
+                            <div id="best-sellers-container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l6">
+                    <div class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Search For Books</span>
+                            <div id="search-form-container">
+                                <form action="#" method="get" id="search-form">
+                                    <div class="form-group">
+                                        <label for="title-search">Enter A Title:</label>
+                                        <input type="text" name="title-search-box" id="title-search"
+                                            aria-describedby="titleHelp"
+                                            placeholder="Harry Potter And The Sorcerer's Stone">
+                                        <small class="helper-text" id="titleHelp">Please enter a book title that you
+                                            wish to search for.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="author-search">Enter An Author:</label>
+                                        <input type="text" name="author-search-box" id="author-search"
+                                            aria-describedby="authorHelp" placeholder="J.K. Rowling">
+                                        <small class="helper-text" id="authorHelp">Please enter an author that you wish
+                                            to search for.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check" aria-describedby="ratingHelp">
+                                            <label for="rating-select">Select A Rating:</label>
+                                            <br>
+                                            <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>Five Stars</span>
+                                                </label>
+                                              </p>
+                                              <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>Four Stars</span>
+                                                </label>
+                                              </p>
+                                              <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>Three Stars</span>
+                                                </label>
+                                              </p>
+                                              <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>Two Stars</span>
+                                                </label>
+                                              </p>
+                                              <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>One Star</span>
+                                                </label>
+                                              </p>
+                                              <br>
+                                              <small class="helper-text" id="ratingHelp">Please select a rating.</small>
+                                              
+
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="form-button" id="submit-btn">Search</button>
+                                    <button type="reset" class="form-button" id="reset-btn">Reset Fields</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6">
+                    <div class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Your Results</span>
+                            <div id="results-container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="row">
+                <div class="col l12">
+                    <div class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Your Reading Lists</span>
+                            <div id="reading-lists-container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     <!-- ===FIREBASE SCRIPTS=== -->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 </body>
 
