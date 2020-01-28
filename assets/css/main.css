@@ -6,26 +6,33 @@ body{
     background-position: center;
 }
 
+
+h1 {
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    
+}
+h5 {
+   
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+     
+}
+
+.form-group{
+    margin: 0 0 15px 0; 
+}
+
+.vertical-align{
+    display: inline;
+}
+
 #page-heading {
 
     text-align: center;
     font-weight: bold;
     
 }
-
-h1 {
-        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    
-}
-
 #tagline {
 
       text-align: center;
       
-}
-
-h5 {
-   
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-     
 }
