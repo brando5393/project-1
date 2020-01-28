@@ -7,16 +7,6 @@ var mvAPI = "XrPZZH0SkeXWEk4ExM3vIM4gh2neOKwv";
     var queryURL="https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=" + mvAPI;
     console.log(queryURL);
 
- //testing looking up a Title (with title stored in a var)
-// var bookTitle= "Mostly Dead Things"
-// var queryURL="https://api.nytimes.com/svc/books/v3/reviews.json?title=" + bookTitle + "&api-key=" + mvAPI;
-// console.log(queryURL);
-
-//testing looking up a Author (with author stored in a var)
-//  var author= "Stephen King"
-//var queryURL="https://api.nytimes.com/svc/books/v3/reviews.json?author="+author+"&api-key="+mvAPI;
-// console.log(queryURL);
-
 
 $.ajax({
     url: queryURL,
@@ -34,18 +24,6 @@ $.ajax({
     //     // console.log(bestsellers[i]);
 
 
-        var title= bestsellers[i].title;
-        // console.log(title);
-        var author= bestsellers[i].author;
-        // console.log(author);
-        var bookImg= bestsellers[i].book_image;
-        // console.log(bookImg);
-        var bookSynp= bestsellers[i].description;
-        // console.log(bookSynp);
-        var ratings=bestsellers[i].rank;
-        // console.log(ratings);
-
-
         var randomBook = bestsellers[Math.floor(Math.random() * bestsellers.length)];
         // console.log(randomBook.title);
 
@@ -56,10 +34,7 @@ $.ajax({
         var ranBookSynp= randomBook.description;
         var ranBookRating= randomBook.rank;
              
-        // for (var j=0; j < randomBook.length; j++) {
-        //     console.log(randomBook[0])
-        // }
-    
+        
         //created Img tag for  bookImg
         var booksImgHolder = $("<img>").attr("src",ranBookImg).addClass("bestSellersImg")
         // console.log(booksImgHolder);
@@ -72,13 +47,7 @@ $.ajax({
             "Synopsis: " + ranBookSynp + "<br>" 
              );
 
-   
-     
-    //have to get the information want to display associated with the random books shown..
-        //this does show random books (only displaying 5 b/c of loop from above);
-
-       
-       //testing if it'll show on HTML
+       //testing if it'll show on HTML ...added test-div in html to test this out for now
      $(".test-div").append(booksImgHolder, bestSellersInfo);
     };
 
