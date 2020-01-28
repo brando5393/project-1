@@ -1,5 +1,7 @@
 // firebase connect code
-
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyCtuSfxpVxINhIyPIpuMGAHswNVvPYAgeM",
@@ -12,3 +14,6 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+  
+  
