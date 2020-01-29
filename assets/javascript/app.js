@@ -40,7 +40,7 @@ $.ajax({
         var exit=false;
         
     
-        //this makes sure the random number always (trying to elimiate duplicates)
+        //this makes sure the random number always (trying to elimiate duplicates) //code from a developer friend
         while (exit==false) {
             randomNum=Math.floor(Math.random() * bestsellers.length);
             if (usedNum[randomNum] == undefined) {
