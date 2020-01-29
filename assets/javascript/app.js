@@ -18,12 +18,14 @@ $.ajax({
     var bestsellers = response.results.books //storing bestsellers in a var
 
 
+    var usedNum= {};
+    
     // need to create a for loop that will only pull 5 random books  out of all these to show 
     for(var i=0; i<5; i++) {
     // for(var i=0; i< bestsellers.length; i++) { //this will pull up ALL the listings of books which is 15
     //     // console.log(bestsellers[i]);
 
-
+        
         var randomBook = bestsellers[Math.floor(Math.random() * bestsellers.length)];
         // console.log(randomBook.title);
 
@@ -33,7 +35,23 @@ $.ajax({
         var ranBookImg=randomBook.book_image;
         var ranBookSynp= randomBook.description;
         var ranBookRating= randomBook.rank;
-             
+
+        var randomNum=Math.floor(Math.random() * bestsellers.length);
+        var exit=false;
+        
+    
+        //this makes sure the random number always (trying to elimiate duplicates)
+        while (exit==false) {
+            randomNum=Math.floor(Math.random() * bestsellers.length);
+            if (usedNum[randomNum] == undefined) {
+                usedNum[randomNum] = true;
+                exit = true;
+            }
+        };
+        console.log(usedNum);
+            
+
+        //need to figure out to delete duplicates for random 
         
         //created Img tag for  bookImg
         var booksImgHolder = $("<img>").attr("src",ranBookImg).addClass("bestSellersImg")
