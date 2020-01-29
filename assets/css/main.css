@@ -6,7 +6,7 @@ body{
     background-position: center;
 }
 
-form span, form label{
+form span, form label, th{
     color: burlywood;
 }
 

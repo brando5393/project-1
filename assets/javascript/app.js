@@ -22,28 +22,28 @@ $(document).ready(function(){
     var tRow = $("<tr>");
 
   //   // Methods run on jQuery selectors return the selector they we run on
-  //   // This is why we can create and save a reference to a td in the same statement we update its text
-    var titleTd = $("<td>").text(data.Title);
-    var yearTd = $("<td>").text(data.Year);
-    var authorTd = $("<td>").text(data.Author);
-    // Append the newly created table data to the table row
-    tRow.append(titleTd, yearTd, authorTd);
-    // Append the table row to the table body
-    $("tbody").append(tRow);
-  };
+  // //   // This is why we can create and save a reference to a td in the same statement we update its text
+  //   var titleTd = $("<td>").text(data.Title);
+  //   var yearTd = $("<td>").text(data.Year);
+  //   var authorTd = $("<td>").text(data.Author);
+  //   // Append the newly created table data to the table row
+  //   tRow.append(titleTd, yearTd, authorTd);
+  //   // Append the table row to the table body
+  //   $("tbody").append(tRow);
+  // };
 
-  // , searche the ? api for books, and then pass the data to createRow
-  var searchBooks= function(books) {
-    var queryURL = "https://www.omdbapi.com/?t=" + books + "&apikey=trilogy";
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-      createRow(response);
-    });
-  };
+  // // , searche the ? api for books, and then pass the data to createRow
+  // var searchBooks= function(books) {
+  //   var queryURL = "https://www.omdbapi.com/?t=" + books + "&apikey=trilogy";
+  //   $.ajax({
+  //     url: queryURL,
+  //     method: "GET"
+  //   }).then(function(response) {
+  //     createRow(response);
+  //   });
+  // };
 
-  // Search the API for the following book, and append table rows for each
-  searchBooks("");
+  // // Search the API for the following book, and append table rows for each
+  // searchBooks("");
  
 
