@@ -17,57 +17,46 @@ $.ajax({
     // console.log(response.results.books);//this gives list of all info of bestsellers in an array
     var bestsellers = response.results.books //storing bestsellers in a var
 
-
-    var usedNum= {};
-
     // need to create a for loop that will only pull 5 random books  out of all these to show 
-    for(var i=0; i<5; i++) {
+    for(var j=0; j<5; j++) {
     // for(var i=0; i< bestsellers.length; i++) { //this will pull up ALL the listings of books which is 15
     //     // console.log(bestsellers[i]);
 
-        
-        var randomBook = bestsellers[Math.floor(Math.random() * bestsellers.length)];
-        // console.log(randomBook.title);
+        var bookTitle= bestsellers[j].title;
+        // console.log(bookTitle);
+        var bookAuth=bestsellers[j].author;
+        var bookImg=bestsellers[j].book_image;
+        var bookSynp= bestsellers[j].description;
+        var bookRating= bestsellers[j].rank;
 
-        var ranBookTitle= randomBook.title;
-        console.log(ranBookTitle);
-        var ranBookAuth=randomBook.author;
-        var ranBookImg=randomBook.book_image;
-        var ranBookSynp= randomBook.description;
-        var ranBookRating= randomBook.rank;
-
-            
-
-        //need to figure out to delete duplicates for random 
-        var randomNum=Math.floor(Math.random() * bestsellers.length);
-        var exit=false;
-        
-    
-        //this makes sure the random number always random (trying to elimiate duplicates) //code from a developer friend
-        while (exit==false) {
-            randomNum=Math.floor(Math.random() * bestsellers.length);
-            if (usedNum[randomNum] == undefined) {
-                usedNum[randomNum] = true;
-                exit = true;
-            }
-        };
-        console.log(usedNum);
         
       
         //created Img tag for  bookImg
-        var booksImgHolder = $("<img>").attr("src",ranBookImg).addClass("bestSellersImg").css({"width" : "100px"});
+        var booksImgHolder = $("<img>").attr("src",bookImg).addClass("bestSellersImg").css({"width" : "100px"});
 
         //all the info to be display 
         var bestSellersInfo= $("<p>").html(
-            "Rank " + ranBookRating  + " out of 15" + "<br>" + //have explain NYT have 15 total somewhere
-            "Title: " + ranBookTitle + "<br>" + 
-            "Author: " + ranBookAuth + "<br>"  +
-            "Synopsis: " + ranBookSynp + "<br>" 
+            "Rank " + bookRating  + "<br>" + 
+            "Title: " + bookTitle + "<br>" + 
+            "Author: " + bookAuth + "<br>"  +
+            "Synopsis: " + bookSynp + "<br>" 
              );
 
-       //testing if it'll show on HTML ...added test-div in html to test this out for now
-     $("#best-sellers-container").prepend(booksImgHolder, bestSellersInfo);
-    };
+       //displaying on html
+     $("#best-sellers-container").append(booksImgHolder);
+
+     var newBookDiv= $("<div>").attr("style", "visibility:hidden");
+     newBookDiv.html(bestSellersInfo).addClass("bookInfo");
+    $("#best-sellers-container").append(newBookDiv);
+
+    };//for loop 
+
+
+    $(".bestSellersImg").on("click", function() {
+        $(".bookInfo").attr("style", "visibility:");
+    });
+
+
 
 }); 
 
