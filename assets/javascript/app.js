@@ -38,18 +38,17 @@ for(var i = 0; i < response.items.length; i++) {
         var bookImg = $("<img>").attr("src", image).addClass("SearchImage")
 
             //variable for results to HTML
-        var yourResults = $("<p>").html(
+        var yourResults = $("<h6>").html(
         "Title: " + title + "<br>" +
         "Author: " + author + "<br>" +
         "Date: " + date + "<br>" //+
-        //"Description: " + descript + "<br>" 
+        //Description: " + descript + "<br>" 
         );
         console.log(yourResults);
         //console.log(BookImg)
         
             //sends results to results div       
     $("#results-container").append(bookImg, yourResults);
-
     
             //this is needed or error appears thank you google :)
     document.cookie = 'cross-site-cookie=bar; SameSite=Lax';
