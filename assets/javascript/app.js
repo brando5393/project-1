@@ -17,9 +17,29 @@ $.ajax({
     // console.log(response.results.books);//this gives list of all info of bestsellers in an array
     var bestsellers = response.results.books //storing bestsellers in a var
 
+    var invervalid;
 
     var usedNum= {};
+
+    function ranBookTime () {
+        setTimeout (startRandom, 3000);
+    };
+    ranBookTime();
     
+    function nextBooks () {
+        setInterval (startRandom, 3000);
+        reset();
+    
+    };
+    
+    function reset () {
+        $(".test-div").empty();
+        
+    }
+
+    
+    function startRandom () {
+        nextBooks();
     // need to create a for loop that will only pull 5 random books  out of all these to show 
     for(var i=0; i<5; i++) {
     // for(var i=0; i< bestsellers.length; i++) { //this will pull up ALL the listings of books which is 15
@@ -36,11 +56,14 @@ $.ajax({
         var ranBookSynp= randomBook.description;
         var ranBookRating= randomBook.rank;
 
+            
+
+        //need to figure out to delete duplicates for random 
         var randomNum=Math.floor(Math.random() * bestsellers.length);
         var exit=false;
         
     
-        //this makes sure the random number always (trying to elimiate duplicates) //code from a developer friend
+        //this makes sure the random number always random (trying to elimiate duplicates) //code from a developer friend
         while (exit==false) {
             randomNum=Math.floor(Math.random() * bestsellers.length);
             if (usedNum[randomNum] == undefined) {
@@ -49,13 +72,10 @@ $.ajax({
             }
         };
         console.log(usedNum);
-            
-
-        //need to figure out to delete duplicates for random 
         
+      
         //created Img tag for  bookImg
-        var booksImgHolder = $("<img>").attr("src",ranBookImg).addClass("bestSellersImg")
-        // console.log(booksImgHolder);
+        var booksImgHolder = $("<img>").attr("src",ranBookImg).addClass("bestSellersImg").css({"width" : "100px"});
 
         //all the info to be display 
         var bestSellersInfo= $("<p>").html(
@@ -69,4 +89,8 @@ $.ajax({
      $(".test-div").append(booksImgHolder, bestSellersInfo);
     };
 
+}; //closure for function start 
+
+
 });
+
