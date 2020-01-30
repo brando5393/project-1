@@ -19,8 +19,6 @@ $.ajax({
 
     // need to create a for loop that will only pull 5 random books  out of all these to show 
     for(var j=0; j<5; j++) {
-    // for(var i=0; i< bestsellers.length; i++) { //this will pull up ALL the listings of books which is 15
-    //     // console.log(bestsellers[i]);
 
         var bookTitle= bestsellers[j].title;
         // console.log(bookTitle);
@@ -45,9 +43,9 @@ $.ajax({
        //displaying on html
      $("#best-sellers-container").append(booksImgHolder);
 
-     var newBookDiv= $("<div>").attr("style", "visibility:hidden");
-     newBookDiv.html(bestSellersInfo).addClass("bookInfo");
-    $("#best-sellers-container").append(newBookDiv);
+     var infoDiv= $("<div>").attr("style", "visibility:hidden");
+     infoDiv.html(bestSellersInfo).addClass("bookInfo");
+    $("#best-sellers-container").append(infoDiv);
 
     };//for loop 
 
