@@ -14,9 +14,15 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- ===JS LINKS=== -->
     <!-- jquery -->
+<<<<<<< HEAD
     <script  src="https://code.jquery.com/jquery-3.4.1.js"
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.4.1.js"
+>>>>>>> 2680e1e0cc6f123355e04b104dbe0ef1bca0f7e3
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- app -->
     <script src="assets/javascript/app.js"></script>
@@ -24,16 +30,173 @@
 </head>
 
 <body>
-    <header>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col l12">
 
+<<<<<<< HEAD
     </header>
     <main>
 <div class="test-div"></div>
     </main>
     <footer>
+=======
+                    <h5 id="tagline">Information, reviews and custom reading lists
+                        all at you fingertips</h5>
+                    <h1 id="page-heading">Welcome to Book Sleuth</h1>
 
-    </footer>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row">
+                <div class="col l12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Best Sellers</span>
+                            <div id="best-sellers-container">
+>>>>>>> 2680e1e0cc6f123355e04b104dbe0ef1bca0f7e3
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l6">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <span class="card-title">Search For Books</span>
+                            <div id="search-form-container">
+                                <form action="#" method="get" id="search-form">
+                                    <div class="form-group">
+                                        <label for="title-search">Enter A Title:</label>
+                                        <input type="text" name="title-search-box" id="title-search"
+                                            aria-describedby="titleHelp"
+                                            placeholder="Harry Potter And The Sorcerer's Stone">
+                                        <small class="helper-text" id="titleHelp">Please enter a book title that you
+                                            wish to search for.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="author-search">Enter An Author:</label>
+                                        <input type="text" name="author-search-box" id="author-search"
+                                            aria-describedby="authorHelp" placeholder="J.K. Rowling">
+                                        <small class="helper-text" id="authorHelp">Please enter an author that you wish
+                                            to search for.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check" aria-describedby="ratingHelp">
+                                            <label for="rating-select">Select A Rating:</label>
+                                            <br>
+                                            <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>Five Stars</span>
+                                                </label>
+                                              </p>
+                                              <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>Four Stars</span>
+                                                </label>
+                                              </p>
+                                              <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>Three Stars</span>
+                                                </label>
+                                              </p>
+                                              <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>Two Stars</span>
+                                                </label>
+                                              </p>
+                                              <p class="vertical-align">
+                                                <label>
+                                                  <input name="rating-select" type="radio" class="with-gap"/>
+                                                  <span>One Star</span>
+                                                </label>
+                                              </p>
+                                              <br>
+                                              <small class="helper-text" id="ratingHelp">Please select a rating.</small>
+                                              
+
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="form-button" id="submit-btn">Search</button>
+                                    <button type="reset" class="form-button" id="reset-btn">Reset Fields</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col l6">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <span class="card-title">Your Results</span>
+                            <table>
+                                <thead>
+                                  <tr>
+                                      <th>Author</th>
+                                      <th>Title</th>
+                                      <th>Stars</th>
+                                  </tr>
+                                </thead>
+                        
+                                <tbody>
+                                  <tr>
+                                    <td>Vonnegut</td>
+                                    <td>Bluebeard</td>
+                                    <td>***</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Tom Robbins</td>
+                                    <td>Incognito</td>
+                                    <td>****</td>
+                                  </tr>
+                                  <tr>
+                                    <td>J.K.Rowling</td>
+                                    <td>Harry Potter and the Scorcer's Stone</td>
+                                    <td>***</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                            <div id="results-container">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+           
+                            <ul class="collapsible">
+                                <li>
+                                  <div class="collapsible-header"><span>Your Reading Lists<i class="large material-icons">library_books</i></div>
+                                  <div class="collapsible-body"></div>
+                                </li>
+                             </ul>
+                            
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- ===FIREBASE SCRIPTS=== -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 </body>
 
 </html>
