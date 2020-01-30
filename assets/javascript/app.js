@@ -15,11 +15,11 @@ $(document).ready(function(){
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  // "I was thinking that this will be data that will go into rows inside the Your Results container?"
+  // // "I was thinking that this will be data that will go into rows inside the Your Results container?"
   
-  var createRow = function(data) {
-    // Create a new table row element
-    var tRow = $("<tr>");
+  // var createRow = function(data) {
+  //   // Create a new table row element
+  //   var tRow = $("<tr>");
 
   //   // Methods run on jQuery selectors return the selector they we run on
   // //   // This is why we can create and save a reference to a td in the same statement we update its text
@@ -38,12 +38,10 @@ $(document).ready(function(){
   //   $.ajax({
   //     url: queryURL,
   //     method: "GET"
-  //   }).then(function(response) {
+  //   }).then(function(response) { 
   //     createRow(response);
   //   });
   // };
 
   // // Search the API for the following book, and append table rows for each
   // searchBooks("");
- 
-
