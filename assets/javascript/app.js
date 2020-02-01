@@ -1,9 +1,6 @@
 
 $(document).ready(function(){
 
-
-
-
         // Submit function for search
 $("#submit-btn").click(function(event) {
     event.preventDefault();
