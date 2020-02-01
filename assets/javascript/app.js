@@ -14,5 +14,11 @@ $(document).ready(function(){
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
+  
+  
+  
+  //when clicking reading list start inputing info from API
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
  
