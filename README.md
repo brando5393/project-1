@@ -5,6 +5,7 @@
 With so many books out there, this application will help narrow down user's book of interest by proving information about the book.  
 
 **Search for a Book**
+
 User can search for a book Title and or Author by:
 1. Type in by Title and/or Author of interest.
 2. Click Search button or press Enter. 
@@ -14,6 +15,7 @@ User can search for a book Title and or Author by:
 
 
 **Refer to New York Times Bestsellers Suggestions**
+
 New York Times offers up to date top 5 books.
 1. Click the image of the books to show more information about the book. 
 2. Information shown: Summary, Author and New York Times rank of 1-5 for each book.  
