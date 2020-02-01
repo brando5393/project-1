@@ -56,18 +56,37 @@ $.ajax({
 //creating on click for each book img to show info about book 
     $(".bestSellersImg").on("click", function() {
 
+        
         var attrShown= $(this).attr("id");
         console.log(attrShown);
     
-        // if(attrShown === "imgNum" + count) {
-            // console.log("true");
+        //  if(attrShown === "imgNum" + count) {
+        //     console.log("true");
         $("#showInfo"+ attrShown).show()
         // $(".bookInfo").attr("style", "visibility:").attr("id")
-        // };
-
-
+         
+       
     });
+   
+   
+         $(".bestSellersImg").on("click", function () {
+             
+            var attrShown=($this).attr("id");
 
+            $("#showInfo" + attrShown).css({
+                    visibility: ""
+                 });
+            $("#showInfo" + attrShown).hide();
+        })
+    // code to hide forms on "finished" button clicks
+        $("#adding-finished-btn").on("click", function () {
+        $("#add-entry-form").css({
+            visibility: "hidden"
+        });
+        $("#control-panel-container").show();
+    })
+
+    
 
 
 }); 
