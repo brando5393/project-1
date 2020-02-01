@@ -13,9 +13,8 @@
     <!-- main -->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- ===JS LINKS=== -->
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- jquery Might need to READD THIS  -->
+  
     <!-- materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -30,11 +29,9 @@
             <div class="row">
                 <div class="col l12">
 
-                    <h5 id="tagline" class="orange-text text lighten-4">Information, reviews and custom reading lists
+                    <h5 id="tagline">Information, reviews and custom reading lists
                         all at you fingertips</h5>
-
-                    <h1 id="page-heading" class="orange-text text lighten-4">Welcome to Book Sleuth</h1>
-
+                    <h1 id="page-heading">Welcome to Book Sleuth</h1>
 
                 </div>
             </div>
@@ -42,8 +39,8 @@
         <main>
             <div class="row">
                 <div class="col l12">
-                    <div class="card brown darken-1">
-                        <div class="card-content white-text">
+                    <div class="card">
+                        <div class="card-content">
                             <span class="card-title">Best Sellers</span>
                             <div id="best-sellers-container">
 
@@ -54,7 +51,7 @@
             </div>
             <div class="row">
                 <div class="col l6">
-                    <div class="card brown darken-1">
+                    <div class="card">
                         <div class="card-content white-text">
                             <span class="card-title">Search For Books</span>
                             <div id="search-form-container">
@@ -85,9 +82,37 @@
                 </div>
                 <div class="row">
                 <div class="col l6">
-                    <div class="card brown darken-1">
+                    <div class="card">
                         <div class="card-content white-text">
                             <span class="card-title">Your Results</span>
+                            <table>
+                                <thead>
+                                  <tr>
+                                      <th>Author</th>
+                                      <th>Title</th>
+                                      <th>Stars</th>
+                                  </tr>
+                                </thead>
+                        
+                                <tbody>
+                                  <tr>
+                                    <td>Vonnegut</td>
+                                    <td>Bluebeard</td>
+                                    <td>***</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Tom Robbins</td>
+                                    <td>Incognito</td>
+                                    <td>****</td>
+                                  </tr>
+                                  <tr>
+                                    <td>J.K.Rowling</td>
+                                    <td>Harry Potter and the Scorcer's Stone</td>
+                                    <td>***</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
                             <div id="results-container">
                                 
                             </div>
@@ -97,19 +122,14 @@
             </div>
         </main>
         <footer>
-            <!-- <div class="row">
-                <div class="col l12">
-                    <div class="card brown darken-1">
-                        <div class="card-content white-text">
-                          <span class="card-title">Your Reading Lists</span>
-                          <div id="reading-lists-container"> -->
+           
                             <ul class="collapsible">
                                 <li>
-                                  <div class="collapsible-header brown "><i class="large material-icons">library_books</i></div>
-                                  <div class="collapsible-body"><span>Your Reading Lists</span></div>
+                                  <div class="collapsible-header"><i class="large material-icons">arrow_drop_down_circle</i><span>Your Reading Lists</div>
+                                  <div class="collapsible-body"></div>
                                 </li>
                              </ul>
-                            <!-- <i class="large material-icons brown">library_books</i> -->
+                            
                           </div>
                         </div>
                         </div>
