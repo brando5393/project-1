@@ -46,15 +46,15 @@ $.ajax({
        //displaying on html
        $("#best-sellers-container").append(booksImgHolder);
 
-     var infoDiv= $("<div>"); //.attr("style", "visibility:hidden");
-     infoDiv.html(bestSellersInfo).attr("id", "showInfo"+ count);
-     infoDiv.addClass("infoDiv");
-     $("#best-sellers-container").append(infoDiv);
-    $("#showInfo" + count).hide();
-
+       var infoDiv= $("<div>");
+    infoDiv.html(bestSellersInfo).attr("id", "showInfo"+ count);
+    $("#best-sellers-container").append(infoDiv);
+   $("#showInfo" + count).hide();
     };//for loop close 
 
     
+
+
 //creating on click for each book img to show info about book 
     $(".bestSellersImg").on("click", function() {
 
