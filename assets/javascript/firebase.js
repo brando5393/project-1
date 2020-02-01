@@ -16,6 +16,7 @@ var firebaseConfig = {
   // login js
   // FirebaseUI config.
   var uiConfig = {
+    signInFlow: 'popup',
     signInSuccessUrl: '<url-to-redirect-to-on-success>',
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
@@ -41,3 +42,8 @@ var firebaseConfig = {
   var ui = new firebaseui.auth.AuthUI(firebase.auth());
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
+  
+
+  function startAuth(){
+
+  }
