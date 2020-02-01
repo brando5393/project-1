@@ -101,3 +101,12 @@ h4 {
 .material-icons {
     color: white;
 }
+.bestSellersImg {
+
+    margin: 25px
+
+      }
+#best-sellers-container {
+
+    text-align: center;
+}
