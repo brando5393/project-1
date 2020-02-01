@@ -16,6 +16,7 @@ $.ajax({
 
     // console.log(response.results.books);//this gives list of all info of bestsellers in an array
     var bestsellers = response.results.books //storing bestsellers in a var
+    var count=0;
 
     // need to create a for loop that will only pull 5 random books  out of all these to show 
     for(var j=0; j<5; j++) {
@@ -28,9 +29,9 @@ $.ajax({
         var bookRating= bestsellers[j].rank;
 
         
-      
+        count++;
         //created Img tag for  bookImg
-        var booksImgHolder = $("<img>").attr("src",bookImg).addClass("bestSellersImg").css({"width" : "100px"});
+        var booksImgHolder = $("<img>").attr("src",bookImg).attr("id", count).addClass("bestSellersImg").css({"width" : "100px"});
 
         //all the info to be display 
         var bestSellersInfo= $("<p>").html(
@@ -38,20 +39,33 @@ $.ajax({
             "Title: " + bookTitle + "<br>" + 
             "Author: " + bookAuth + "<br>"  +
             "Synopsis: " + bookSynp + "<br>" 
-             );
+             )
+           
+         
 
        //displaying on html
-     $("#best-sellers-container").append(booksImgHolder);
+       $("#best-sellers-container").append(booksImgHolder);
 
-     var infoDiv= $("<div>").attr("style", "visibility:hidden");
-     infoDiv.html(bestSellersInfo).addClass("bookInfo");
-    $("#best-sellers-container").append(infoDiv);
+     var infoDiv= $("<div>"); //.attr("style", "visibility:hidden");
+     infoDiv.html(bestSellersInfo).attr("id", "showInfo"+ count);
+     $("#best-sellers-container").append(infoDiv);
+    $("#showInfo" + count).hide();
 
-    };//for loop 
+    };//for loop close 
 
-
+//creating on click for each book img to show info about book 
     $(".bestSellersImg").on("click", function() {
-        $(".bookInfo").attr("style", "visibility:");
+
+        var attrShown= $(this).attr("id");
+        console.log(attrShown);
+    
+        // if(attrShown === "imgNum" + count) {
+            // console.log("true");
+        $("#showInfo"+ attrShown).show()
+        // $(".bookInfo").attr("style", "visibility:").attr("id")
+        // };
+
+
     });
 
 
