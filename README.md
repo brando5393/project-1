@@ -24,3 +24,4 @@ New York Times offers up to date top 5 books.
 
 This application uses Firebase to store user searches. It's built with Materialize, HTML, JQuery, and CSS. This project utilizes Google Books API and New York API for information on books.  
 
+#### Link to live site: https://brando5393.github.io/project-1
