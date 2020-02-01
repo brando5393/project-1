@@ -2,7 +2,7 @@
 
 <h2> Welcome to Book Sleuth! </h2> 
 
-With so many books out there, this application will help narrow down user's book of interest by proving information about the book.  
+With so many books out there, this application will help narrow down user's book of interest by providing information about the book.  
 
 **Search for a Book**
 
