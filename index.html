@@ -14,10 +14,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- ===JS LINKS=== -->
     <!-- jquery Might need to READD THIS  -->
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -74,7 +72,7 @@
                                         <small class="helper-text" id="authorHelp">Please enter an author that you wish
                                             to search for.</small>
                                     </div>
-                                    
+
                                     <button type="submit" class="form-button" id="submit-btn">Search</button>
                                     <button type="reset" class="form-button" id="reset-btn">Reset Fields</button>
 
@@ -84,40 +82,34 @@
                     </div>
                 </div>
                 <div class="row">
-                <div class="col l6">
-                    <div class="card">
-                        <div class="card-content white-text">
-                            <span class="card-title">Your Results</span>
-        
-                            <div id="results-container">
-                                
+                    <div class="col l6">
+                        <div class="card">
+                            <div class="card-content white-text">
+                                <span class="card-title">Your Results</span>
+
+                                <div id="results-container">
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </main>
         <footer>
-           
-                            <ul class="collapsible">
-                                <li>
-                                  <div class="collapsible-header"><i class="large material-icons">arrow_drop_down_circle</i><span>Your Reading Lists</div>
-                                  <div class="collapsible-body"></div>
-                                </li>
-                             </ul>
-                            
-                          </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>    <!-- ===FIREBASE SCRIPTS=== -->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><i class="large material-icons">arrow_drop_down_circle</i><span>Your
+                            Reading Lists</div>
+                    <div class="collapsible-body"></div>
+                </li>
+            </ul>
+        </footer>
+    </div> <!-- ===FIREBASE SCRIPTS=== -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 </body>
 
