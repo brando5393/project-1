@@ -48,15 +48,17 @@ $.ajax({
 
      var infoDiv= $("<div>"); //.attr("style", "visibility:hidden");
      infoDiv.html(bestSellersInfo).attr("id", "showInfo"+ count);
+     infoDiv.addClass("infoDiv");
      $("#best-sellers-container").append(infoDiv);
     $("#showInfo" + count).hide();
 
     };//for loop close 
 
+    
 //creating on click for each book img to show info about book 
     $(".bestSellersImg").on("click", function() {
 
-        
+        $(".infoDiv").hide()
         var attrShown= $(this).attr("id");
         console.log(attrShown);
     
@@ -69,22 +71,22 @@ $.ajax({
     });
    
    
-         $(".bestSellersImg").on("click", function () {
+        //  $(".bestSellersImg").on("click", function () {
              
-            var attrShown=($this).attr("id");
+        //     var attrShown=($this).attr("id");
 
-            $("#showInfo" + attrShown).css({
-                    visibility: ""
-                 });
-            $("#showInfo" + attrShown).hide();
-        })
-    // code to hide forms on "finished" button clicks
-        $("#adding-finished-btn").on("click", function () {
-        $("#add-entry-form").css({
-            visibility: "hidden"
-        });
-        $("#control-panel-container").show();
-    })
+        //     $("#showInfo" + attrShown).css({
+        //             visibility: ""
+        //          });
+        //     $("#showInfo" + attrShown).hide();
+        // })
+    // // code to hide forms on "finished" button clicks
+    //     $("#adding-finished-btn").on("click", function () {
+    //     $("#add-entry-form").css({
+    //         visibility: "hidden"
+    //     });
+    //     $("#control-panel-container").show();
+    // })
 
     
 
