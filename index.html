@@ -2,116 +2,120 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- ===CSS LINKS=== -->
-    <!-- reset -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <!-- materialize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- main -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <!-- ===JS LINKS=== -->
-    <!-- jquery Might need to READD THIS  -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- materialize -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- app -->
-    <script src="assets/javascript/app.js"></script>
-    <title>Project 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- ===CSS LINKS=== -->
+  <!-- reset -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- main -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- ===JS LINKS=== -->
+  <!-- jquery Might need to READD THIS  -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <!-- materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- app -->
+  <script src="assets/javascript/app.js"></script>
+  <title>Project 1</title>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div class="row">
-                <div class="col l12">
-                
-                    <h5 id="tagline">Information, reviews and custom reading lists
-                        all at you fingertips</h5>
-                    <h1 id="page-heading">Welcome to Book Sleuth</h1>
+  <div class="container">
+    <header>
+      <div class="row">
+        <div class="col l12">
 
-                </div>
+          <h5 id="tagline">Information, reviews and custom reading lists
+            all at you fingertips</h5>
+          <h1 id="page-heading">Welcome to Book Sleuth</h1>
+
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col l12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Best Sellers</span>
+              <div id="best-sellers-container">
+
+              </div>
             </div>
-        </header>
-        <main>
-            <div class="row">
-                <div class="col l12">
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title">Best Sellers</span>
-                            <div id="best-sellers-container">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col l6">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Search For Books</span>
+              <div id="search-form-container">
+                <form action="#" method="get" id="search-form">
+                  <div class="form-group">
+                    <label for="title-search">Enter A Title:</label>
+                    <input type="text" name="title-search-box" id="title-search" aria-describedby="titleHelp"
+                      placeholder="Harry Potter And The Sorcerer's Stone">
+                    <small class="helper-text" id="titleHelp">Please enter a book title that you
+                      wish to search for.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="author-search">Enter An Author:</label>
+                    <input type="text" name="author-search-box" id="author-search" aria-describedby="authorHelp"
+                      placeholder="J.K. Rowling">
+                    <small class="helper-text" id="authorHelp">Please enter an author that you wish
+                      to search for.</small>
+                  </div>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  <button type="submit" class="form-button" id="submit-btn">Search</button>
+                  <button type="reset" class="form-button" id="reset-btn">Reset Fields</button>
+
+                </form>
+              </div>
             </div>
-            <div class="row">
-                <div class="col l6">
-                    <div class="card">
-                        <div class="card-content white-text">
-                            <span class="card-title">Search For Books</span>
-                            <div id="search-form-container">
-                                <form action="#" method="get" id="search-form">
-                                    <div class="form-group">
-                                        <label for="title-search">Enter A Title:</label>
-                                        <input type="text" name="title-search-box" id="title-search"
-                                            aria-describedby="titleHelp"
-                                            placeholder="Harry Potter And The Sorcerer's Stone">
-                                        <small class="helper-text" id="titleHelp">Please enter a book title that you
-                                            wish to search for.</small>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="author-search">Enter An Author:</label>
-                                        <input type="text" name="author-search-box" id="author-search"
-                                            aria-describedby="authorHelp" placeholder="J.K. Rowling">
-                                        <small class="helper-text" id="authorHelp">Please enter an author that you wish
-                                            to search for.</small>
-                                    </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l6">
+            <div class="card">
+              <div class="card-content white-text">
+                <span class="card-title">Your Results</span>
 
-                                    <button type="submit" class="form-button" id="submit-btn">Search</button>
-                                    <button type="reset" class="form-button" id="reset-btn">Reset Fields</button>
+                <div id="results-container">
 
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col l6">
-                        <div class="card">
-                            <div class="card-content white-text">
-                                <span class="card-title">Your Results</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer>
 
-                                <div id="results-container">
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header"><i class="large material-icons">arrow_drop_down_circle</i><span>Your Reading
+              Lists</div>
+          <div class="collapsible-body"></div>
+        </li>
+      </ul>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </main>
-        <footer>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </footer>
+  </div> <!-- ===FIREBASE SCRIPTS=== -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="large material-icons">arrow_drop_down_circle</i><span>Your
-                            Reading Lists</div>
-                    <div class="collapsible-body"></div>
-                </li>
-            </ul>
-        </footer>
-    </div> 
-    <!-- ===FIREBASE SCRIPTS=== -->
-    <script src="assets/javascript/firebase.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 </body>
 
